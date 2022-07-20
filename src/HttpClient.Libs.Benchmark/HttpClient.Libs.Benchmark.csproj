@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Remove="LibsImpl\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="LibsImpl\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="LibsImpl\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="BenchmarkDotNet" Version="0.13.1" />
+      <PackageReference Include="Flurl" Version="3.0.6" />
+      <PackageReference Include="Flurl.Http" Version="3.2.4" />
+      <PackageReference Include="Refit" Version="6.3.2" />
+      <PackageReference Include="RestSharp" Version="108.0.1" />
+    </ItemGroup>
+
+</Project>
